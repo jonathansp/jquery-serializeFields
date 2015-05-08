@@ -1,8 +1,8 @@
 /*
- * serializeFields
+ * jquery-serializeFields v0.0.1
  * https://github.com/jonathansp/serializeFields
  *
- * Copyright (c) 2015 
+ * Copyright (c) 2015
 
  * Jonathan Prates (jonathansp),
  * Gabriel Broilo (broilogabriel)
