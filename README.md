@@ -71,4 +71,12 @@ Copyright (c) 2015
 * Jonathan Prates (jonathansp),
 * Gabriel Broilo (broilogabriel)
 
+## NPM
+
+Download at https://www.npmjs.com/package/jquery-serializefields
+
+```bash
+npm i jquery-serializefields
+```
+
 Licensed under GPL license.
