@@ -1,7 +1,9 @@
-# serializeFields
+# jquery-serializeFields
 jQuery plugin to serialize form elements into a complex json object
 
 ## How to use
+
+HTML code:
 
 ```html
 <form id="form1">
@@ -25,6 +27,8 @@ jQuery plugin to serialize form elements into a complex json object
 
 ```
 
+JS code:
+
 ```javascript
 $(document).ready(function() {
     $("#form1").submit(function(event) {
@@ -36,6 +40,8 @@ $(document).ready(function() {
     });
 });
 ```
+
+Result:
 
 ```javascript
 {
@@ -61,6 +67,8 @@ $(document).ready(function() {
 
 ## License
 Copyright (c) 2015
+
 * Jonathan Prates (jonathansp),
 * Gabriel Broilo (broilogabriel)
+
 Licensed under GPL license.
