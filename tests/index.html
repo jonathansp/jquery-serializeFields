@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="../src/jquery-serializeFields.js"></script>
+</head>
+
+<body>
+
+    <form id="form1">
+        <input type="text" name="username" value="my user name" />
+
+        <fieldset name="address">
+            <input type="text" name="street" value="654, test street" />
+            <input type="text" name="county" value="Brazil" />
+        </fieldset>
+
+        <fieldset name="contact">
+            <input type="text" name="email" value="contact@mysite.com" />
+            <fieldset name="phones">
+                <input type="text" name="primary" value="+55 51 123456789" />
+                <input type="text" name="mobile" value="+55 51 987654987" />
+            </fieldset>
+        </fieldset>
+
+        <input type="submit" />
+    </form>
+
+    <script>
+        $(document).ready(function() {
+            $("#form1").submit(function(event) {
+
+                var data = $(this).serializeFields();
+
+                event.preventDefault();
+                console.log(JSON.stringify(data));
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -22,12 +22,8 @@
         var response = [];
         var parse = function(element) {
 
-            if (!$(this).is("form")) {
-                throw "Not a form element."
-            }
-
             var data = {};
-            element.children().each(function() {
+            $(element).children().each(function() {
                 if ($(this).is(settings.field_selector)) {
                     var key = $(this).attr("name") || $(this).attr("id");
                     var value = $(this).val();
@@ -52,7 +48,7 @@
         if (this.length < 1) {
             return;
         } else if (this.length == 1) {
-            return parse($(this));
+            return parse($(this)[0]);
         } else {
             this.each(function() {
                 response.push(
