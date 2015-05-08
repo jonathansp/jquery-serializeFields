@@ -1,5 +1,5 @@
 {
-    "name": "jquery-serializeFields",
+    "name": "jquery-serializefields",
     "version": "0.0.1",
     "author": {
         "name": "Jonathan Simon Prates",
@@ -13,5 +13,10 @@
     "licenses": [{
         "type": "GPL",
         "url": "https://raw.githubusercontent.com/jonathansp/jquery-serializeFields/master/LICENSE"
-    }]
+    }],
+    "keywords": [
+        "serialize",
+        "serializeObject",
+        "jquery-plugin"
+    ]
 }
