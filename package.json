@@ -1,0 +1,17 @@
+{
+    "name": "jquery-serializeFields",
+    "version": "0.0.1",
+    "author": {
+        "name": "Jonathan Simon Prates",
+        "url": "http://mest.re/",
+        "email": "jonathan.simonprates@gmail.com"
+    },
+    "contributors": [{
+        "name": "Gabriel Broilo",
+        "email": "broilo.gabriel@gmail.com"
+    }],
+    "licenses": [{
+        "type": "GPL",
+        "url": "https://raw.githubusercontent.com/jonathansp/jquery-serializeFields/master/LICENSE"
+    }]
+}
