@@ -2,7 +2,7 @@
     "name": "serializeFields",
     "title": "jQuery plugin to serialize form elements into a complex json object",
     "description": "jQuery plugin to serialize form elements into a complex json object",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "homepage": "https://github.com/jonathansp/jquery-serializeFields",
     "author": {
         "name": "Jonathan Simon Prates",
@@ -27,6 +27,7 @@
     },
     "keywords": [
         "serialize",
-        "serializeObject"
+        "serializeObject",
+        "jquery-plugin"
     ]
 }

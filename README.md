@@ -60,10 +60,20 @@ Result:
 }
 ```
 
+Options:
+
+```javascript
+var data = $(this).serializeFields({
+    fieldset_nameattr: "name",
+    fieldset_selector: "fieldset:enabled",
+    field_selector: "input:enabled"
+});
+```
 
 ## Release
 
-0.0.1 First version
+0.0.2 Added support to nested elements.
+0.0.1 First version.
 
 ## License
 Copyright (c) 2015

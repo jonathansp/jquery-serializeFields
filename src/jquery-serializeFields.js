@@ -1,5 +1,5 @@
 /*
- * jquery-serializeFields v0.0.1
+ * jquery-serializeFields v0.0.2
  * https://github.com/jonathansp/serializeFields
  *
  * Copyright (c) 2015
@@ -9,53 +9,60 @@
 
  * Licensed under GPL license.
  */
-(function($) {
+(function ($) {
 
-    "use strict"
+    "use strict";
 
-    $.fn.serializeFields = function(options) {
+    $.fn.serializeFields = function (options) {
         var settings = $.extend({
+            field_selector: "input:enabled",
             fieldset_selector: "fieldset:enabled",
-            field_selector: "input:enabled"
+            fieldset_nameattr: "data-name"
         }, options);
 
         var response = [];
-        var parse = function(element) {
+        var parse = function (element) {
 
             var data = {};
-            $(element).children().each(function() {
+            $(element).children().each(function () {
+
                 if ($(this).is(settings.field_selector)) {
                     var key = $(this).attr("name") || $(this).attr("id");
                     var value = $(this).val();
 
-                    if (key)
+                    if (key) {
                         data[key] = value;
+                    }
+
                 } else {
 
                     if ($(this).is(settings.fieldset_selector)) {
-                        var name = $(this).attr("name");
+                        var name = $(this).attr(settings.fieldset_nameattr);
                         if (name) {
                             data[name] = parse($(this));
-                        } else {
-                            $.extend(data, parse($(this)));
                         }
+                    } else {
+                        $.extend(data, parse($(this)));
                     }
                 }
             });
             return data;
-        }
+        };
 
         if (this.length < 1) {
-            return;
-        } else if (this.length == 1) {
-            return parse($(this)[0]);
-        } else {
-            this.each(function() {
-                response.push(
-                    parse($(this))
-                );
-            });
-            return response;
+            return;  // do nothing
         }
+
+        if (this.length === 1) {
+            return parse($(this)[0]); // return as object
+        }
+
+        this.each(function () {
+            response.push(
+                parse($(this))
+            );
+        });
+        return response;  /// return as array
+
     };
 }(jQuery));
