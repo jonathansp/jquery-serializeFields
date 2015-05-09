@@ -48,7 +48,7 @@ Result:
     "username":"my user name",
     "address":{
         "street":"654, test street",
-        "county":"Brazil"
+        "country":"Brazil"
     },
     "contact":{
         "email":"contact@mysite.com",
@@ -81,12 +81,18 @@ Copyright (c) 2015
 * Jonathan Prates (jonathansp),
 * Gabriel Broilo (broilogabriel)
 
-## NPM
+
+### NPM
 
 Download at https://www.npmjs.com/package/jquery-serializefields
 
 ```bash
 npm i jquery-serializefields
+```
+
+### Bower
+```bash
+bower install jquery-serializefields
 ```
 
 Licensed under GPL license.
