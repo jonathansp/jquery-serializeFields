@@ -11,7 +11,7 @@ HTML code:
 
     <fieldset name="address">
         <input type="text" name="street" value="654, test street" />
-        <input type="text" name="county" value="Brazil" />
+        <input type="text" name="country" value="Brazil" />
     </fieldset>
 
     <fieldset name="contact">
