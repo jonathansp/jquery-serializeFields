@@ -1,0 +1,27 @@
+{
+  "name": "jquery-serializeFields",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jonathansp/jquery-serializeFields",
+  "authors": [
+    "Jonathan Simon Prates <jonathan.simonprates@gmail.com>",
+    "Gabriel Broilo <broilo.gabriel@gmail.com>"
+  ],
+  "description": "jQuery plugin to serialize form elements into a complex json object",
+  "main": "src/jquery-serializeFields.js",
+  "keywords": [
+    "Jquery",
+    "Plugin",
+    "Complex",
+    "Objects",
+    "serialize",
+    "serializeObject"
+  ],
+  "license": "GPL",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
