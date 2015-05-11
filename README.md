@@ -74,10 +74,10 @@ var data = $(this).serializeFields({
 
 These are great plugins, but all of them are "bracket-based" and not so intuitive. Take a look:
 
-https://github.com/marioizquierdo/jquery.serializeJSON
-https://github.com/macek/jquery-serialize-object
-https://github.com/sdrdis/jquery.serialize-hash
-https://github.com/danheberden/jquery-serializeForm
+* https://github.com/marioizquierdo/jquery.serializeJSON
+* https://github.com/macek/jquery-serialize-object
+* https://github.com/sdrdis/jquery.serialize-hash
+* https://github.com/danheberden/jquery-serializeForm
 
 
 ## Release
