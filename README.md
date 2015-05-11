@@ -70,6 +70,16 @@ var data = $(this).serializeFields({
 });
 ```
 
+## Why not jquery.serializeJSON, jquery-serialize-object, jquery.serialize-hash or jquery-serializeForm?
+
+These are great plugins, but all of them are "bracket-based" and not so intuitive. Take a look:
+
+https://github.com/marioizquierdo/jquery.serializeJSON
+https://github.com/macek/jquery-serialize-object
+https://github.com/sdrdis/jquery.serialize-hash
+https://github.com/danheberden/jquery-serializeForm
+
+
 ## Release
 
 * 0.0.2 Added support to nested elements.
