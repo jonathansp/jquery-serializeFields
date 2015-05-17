@@ -102,7 +102,7 @@ npm i jquery-serializefields
 
 ### Bower
 ```bash
-bower install jquery-serializefields
+bower install jquery-serializeFields
 ```
 
 Licensed under GPL license.
