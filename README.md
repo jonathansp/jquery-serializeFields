@@ -66,7 +66,10 @@ Options:
 var data = $(this).serializeFields({
     fieldset_nameattr: "name",
     fieldset_selector: "fieldset:enabled",
-    field_selector: "input:enabled"
+    field_selector: "input:enabled",
+    ignored_fields: [
+      "input[type=checkbox]:not(:checked)"
+    ]
 });
 ```
 
