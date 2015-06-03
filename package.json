@@ -1,6 +1,6 @@
 {
     "name": "jquery-serializefields",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "author": {
         "name": "Jonathan Simon Prates",
         "url": "http://mest.re/",
@@ -9,6 +9,9 @@
     "contributors": [{
         "name": "Gabriel Broilo",
         "email": "broilo.gabriel@gmail.com"
+    },{
+        "name": "Cristian Oliveira da Rosa",
+        "email": "contato@cristianoliveira.com.br"
     }],
     "licenses": [{
         "type": "GPL",
