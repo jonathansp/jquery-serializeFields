@@ -155,14 +155,33 @@ QUnit.test("When set ignored field it should respect", function(assert) {
     assert.ok(wasDefined(result.not_ignored_field), "Property not_ignored_field must defined!")
 });
 
+QUnit.test("When form has numeric inputs it should parse value to float", function(assert) {
 
-QUnit.test("When form has checkbox it should get value only from 'checked'", function(assert) {
+    // given
+    var form = '<form>' +
+        '  <input type="text" name="value_integer" value="1" />' +
+        '  <input type="text" name="value_not_number" value="NaN" />' +
+        '  <input type="text" name="value_float" value="1.0" />' +
+        '  <input type="text" name="value_float_with_comma" value="1,0" />' +
+        '</form>';
+
+    // when
+    var result = $(form).serializeFields()
+
+    // then
+    assert.equal(1, result.value_integer , "Property value_integer has a integer value!")
+    assert.equal("NaN", result.value_not_number , "Property value_not_number must not be a number!")
+    assert.equal(1.0, result.value_float , "Property value_float has a float value!")
+    assert.equal(1.0, result.value_float , "Property value_float_with_comma has a float value!")
+});
+
+QUnit.test("When form has checkbox it should always get value true or false", function(assert) {
 
     // given
     var form = '<form>' +
         '  <input type="checkbox" name="checked" value="true" checked/>' +
         '  <input type="checkbox" name="unchecked1" value="true"/>' +
-        '  <input type="checkbox" name="unchecked2" value="true"/>' +
+        '  <input type="checkbox" name="unchecked2" value="anothervalue"/>' +
         '</form>';
 
     // when
