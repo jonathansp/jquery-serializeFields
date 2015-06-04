@@ -172,7 +172,7 @@ QUnit.test("When form has numeric inputs it should parse value to float", functi
     assert.equal(1, result.value_integer , "Property value_integer has a integer value!")
     assert.equal("NaN", result.value_not_number , "Property value_not_number must not be a number!")
     assert.equal(1.0, result.value_float , "Property value_float has a float value!")
-    assert.equal(1.0, result.value_float , "Property value_float_with_comma has a float value!")
+    assert.equal(1.0, result.value_float_with_comma , "Property value_float_with_comma has a float value!")
 });
 
 QUnit.test("When form has checkbox it should always get value true or false", function(assert) {
@@ -191,4 +191,22 @@ QUnit.test("When form has checkbox it should always get value true or false", fu
     assert.equal(result.checked, true, "Property checked has value true!")
     assert.equal(result.unchecked1, false, "Property unchecked1 must be false!")
     assert.equal(result.unchecked2, false, "Property unchecked2 must be false!")
+});
+
+QUnit.test("When form has select input it should get value from selected", function(assert) {
+
+    // given
+    var form = '<form>'+
+    '<select name="carlist">'+
+    ' <option value="volvo" selected>Volvo</option>'+
+    ' <option value="saab">Saab</option>'+
+    ' <option value="opel">Opel</option>'+
+    '</select>'+
+    '</form>';
+
+    // when
+    var result = $(form).serializeFields()
+
+    // then
+    assert.equal(result.carlist, "volvo", "Property carlist has value Volvo!")
 });

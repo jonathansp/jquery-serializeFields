@@ -43,7 +43,7 @@
 
         defaultSettings: function() {
             return {
-                field_selector: "input:enabled",
+                field_selector: "input:enabled,select:enabled",
                 fieldset_selector: "fieldset:enabled",
                 fieldset_nameattr: "data-name",
                 ignored_fields: null
@@ -55,7 +55,6 @@
 
           param: options
         **/
-
         extendSettings: function(options) {
             $.serializeFields.settings = $.serializeFields.defaultSettings();
             $.extend($.serializeFields.settings, options)
