@@ -210,6 +210,26 @@ QUnit.test("When form has select input it should get value from selected", funct
     assert.equal(result.carlist, "volvo", "Property carlist has value Volvo!")
 });
 
+QUnit.test("When form has multiple select it should return an Array value from selecteds", function(assert) {
+
+    // given
+    var form = '<form>'+
+    '<select name="carlist" multiple>'+
+    ' <option value="volvo" selected>Volvo</option>'+
+    ' <option value="saab" selected>Saab</option>'+
+    ' <option value="opel">Opel</option>'+
+    '</select>'+
+    '</form>';
+
+    // when
+    var result = $(form).serializeFields()
+
+    // then
+    assert.ok(result.carlist instanceof Array, "Property carlist is an Array.")
+    assert.equal(result.carlist[0], "volvo" , "Property carlist[0] has value Volvo!")
+    assert.equal(result.carlist[1], "saab" , "Property carlist[1] has value Saab!")
+});
+
 QUnit.test("When form has radio button input it should get value from checked", function(assert) {
 
     // given
