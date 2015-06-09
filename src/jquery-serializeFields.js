@@ -1,5 +1,5 @@
 /*!
- * jquery-serializeFields v0.0.3
+ * jquery-serializeFields v0.0.4
  * https://github.com/jonathansp/serializeFields
  *
  * Copyright (c) 2015
