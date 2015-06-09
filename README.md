@@ -82,6 +82,14 @@ These are great plugins, but all of them are "bracket-based" and not so intuitiv
 * https://github.com/sdrdis/jquery.serialize-hash
 * https://github.com/danheberden/jquery-serializeForm
 
+## Build
+
+It uses grunt to manage build tasks so to build your own version do:
+
+```bash
+npm install
+grunt build
+```
 
 ## Release
 

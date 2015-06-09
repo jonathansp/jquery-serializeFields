@@ -1,31 +1,42 @@
 {
-    "name": "jquery-serializefields",
-    "version": "0.0.4",
-    "author": {
-        "name": "Jonathan Simon Prates",
-        "url": "http://mest.re/",
-        "email": "jonathan.simonprates@gmail.com"
+  "name": "jquery-serializefields",
+  "version": "0.0.4",
+  "author": {
+    "name": "Jonathan Simon Prates",
+    "url": "http://mest.re/",
+    "email": "jonathan.simonprates@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Gabriel Broilo",
+      "email": "broilo.gabriel@gmail.com"
     },
-    "contributors": [{
-        "name": "Gabriel Broilo",
-        "email": "broilo.gabriel@gmail.com"
-    },{
-        "name": "Cristian Oliveira da Rosa",
-        "email": "contato@cristianoliveira.com.br"
-    }],
-    "licenses": [{
-        "type": "GPL",
-        "url": "https://raw.githubusercontent.com/jonathansp/jquery-serializeFields/master/LICENSE"
-    }],
-    "keywords": [
-        "serialize",
-        "serializeObject",
-        "jquery-plugin"
-    ],
-    "devDependencies": {
-        "grunt": "~0.3.14"
-    },
-    "scripts": {
-        "test": "grunt travis --verbose"
+    {
+      "name": "Cristian Oliveira da Rosa",
+      "email": "contato@cristianoliveira.com.br"
     }
+  ],
+  "licenses": [
+    {
+      "type": "GPL",
+      "url": "https://raw.githubusercontent.com/jonathansp/jquery-serializeFields/master/LICENSE"
+    }
+  ],
+  "keywords": [
+    "serialize",
+    "serializeObject",
+    "jquery-plugin"
+  ],
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-qunit": "^0.7.0",
+    "grunt-contrib-uglify": "^0.9.1",
+    "lint": "^1.1.2",
+    "qunit": "^0.7.6"
+  },
+  "scripts": {
+    "test": "grunt travis --verbose"
+  }
 }
