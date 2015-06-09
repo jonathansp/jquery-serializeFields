@@ -1,4 +1,4 @@
-/*
+/*!
  * jquery-serializeFields v0.0.3
  * https://github.com/jonathansp/serializeFields
  *
@@ -57,7 +57,7 @@
         **/
         extendSettings: function(options) {
             $.serializeFields.settings = $.serializeFields.defaultSettings();
-            $.extend($.serializeFields.settings, options)
+            $.extend($.serializeFields.settings, options);
         },
 
         /**
@@ -119,5 +119,5 @@
             });
             return data;
         }
-    }
+    };
 }(jQuery));
