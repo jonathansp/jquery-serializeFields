@@ -1,7 +1,7 @@
-# jquery-serializeFields [![npm version](https://badge.fury.io/js/jquery-serializefields.svg)](http://badge.fury.io/js/jquery-serializefields) [![Bower version](https://badge.fury.io/bo/jquery-serializeFields.svg)](http://badge.fury.io/bo/jquery-serializeFields)
-[![Build Status](https://travis-ci.org/CristianOliveiraDaRosa/jquery-serializeFields.svg?branch=fix_radio_select)](https://travis-ci.org/CristianOliveiraDaRosa/jquery-serializeFields)
-jQuery plugin to serialize form elements into a complex json object
+# jquery-serializeFields 
+[![npm version](https://badge.fury.io/js/jquery-serializefields.svg)](http://badge.fury.io/js/jquery-serializefields) [![Bower version](https://badge.fury.io/bo/jquery-serializeFields.svg)](http://badge.fury.io/bo/jquery-serializeFields) [![Build Status](https://travis-ci.org/CristianOliveiraDaRosa/jquery-serializeFields.svg?branch=continous_integration)](https://travis-ci.org/CristianOliveiraDaRosa/jquery-serializeFields)
 
+jQuery plugin to serialize form elements into a complex json object
 
 ## How to use
 
@@ -84,7 +84,7 @@ These are great plugins, but all of them are "bracket-based" and not so intuitiv
 
 ## Build
 
-It uses grunt to manage build tasks so to build your own version do:
+It uses grunt to manage build tasks so to compile your own version do:
 
 ```bash
 npm install
