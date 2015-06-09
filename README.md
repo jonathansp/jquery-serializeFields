@@ -98,8 +98,8 @@ More tasks can be found in Gruntfile
 
 ## Release
 
-* 0.0.4 Added support to radio and select inputs
-* 0.0.3 Added support to ignore fields and checkbox fix
+* 0.0.4 Added support to radio and select inputs.
+* 0.0.3 Added support to ignore fields and checkbox fix.
 * 0.0.2 Added support to nested elements.
 * 0.0.1 First version.
 
