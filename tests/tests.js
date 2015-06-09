@@ -18,7 +18,6 @@ QUnit.test("When form has one field it should create a simple Object", function(
     assert.equal(name, result.name, "result.name is equal: " + result.name)
 });
 
-
 QUnit.test("When form has fieldset it should create an Object with child", function(assert) {
     // given
     var name = "Obama"
@@ -132,8 +131,8 @@ QUnit.test("When define a filter to get property of object it should respect", f
     })
 
     // then
-    assert.ok(wasDefined(result.bydataproperty), "Property was defined by data-property tag!")
-    assert.ok(!wasDefined(result.bytagname), "Property was not defined by input name!")
+    assert.ok(wasDefined(result.bydataproperty), "Property bydataproperty was defined by data-property tag!")
+    assert.ok(!wasDefined(result.bytagname), "Property bytagname was not defined by input name!")
 });
 
 QUnit.test("When set ignored field it should respect", function(assert) {
@@ -151,8 +150,8 @@ QUnit.test("When set ignored field it should respect", function(assert) {
     var result = $(form).serializeFields(option);
 
     // then
-    assert.ok(!wasDefined(result.ignored_field), "Property ignored_field must not defined!")
-    assert.ok(wasDefined(result.not_ignored_field), "Property not_ignored_field must defined!")
+    assert.ok(!wasDefined(result.ignored_field), "Property ignored_field must not be defined!")
+    assert.ok(wasDefined(result.not_ignored_field), "Property not_ignored_field must be defined!")
 });
 
 QUnit.test("When form has numeric inputs it should parse value to float", function(assert) {
@@ -162,17 +161,17 @@ QUnit.test("When form has numeric inputs it should parse value to float", functi
         '  <input type="text" name="value_integer" value="1" />' +
         '  <input type="text" name="value_not_number" value="NaN" />' +
         '  <input type="text" name="value_float" value="1.0" />' +
-        '  <input type="text" name="value_float_with_comma" value="1,0" />' +
+        '  <input type="text" name="value_float_with_comma" value="1,5" />' +
         '</form>';
 
     // when
     var result = $(form).serializeFields()
 
     // then
-    assert.equal(1, result.value_integer , "Property value_integer has a integer value!")
-    assert.equal("NaN", result.value_not_number , "Property value_not_number must not be a number!")
-    assert.equal(1.0, result.value_float , "Property value_float has a float value!")
-    assert.equal(1.0, result.value_float , "Property value_float_with_comma has a float value!")
+    assert.equal(result.value_integer, 1, "Property value_integer has a integer value!")
+    assert.equal(result.value_not_number, "NaN",  "Property value_not_number must not be a number!")
+    assert.equal(result.value_float, 1.0, "Property value_float has a float value!")
+    assert.ok(!$.isNumeric(result.value_float_with_comma), "Property value_float_with_comma must not be parsed to float!")
 });
 
 QUnit.test("When form has checkbox it should always get value true or false", function(assert) {
@@ -191,4 +190,57 @@ QUnit.test("When form has checkbox it should always get value true or false", fu
     assert.equal(result.checked, true, "Property checked has value true!")
     assert.equal(result.unchecked1, false, "Property unchecked1 must be false!")
     assert.equal(result.unchecked2, false, "Property unchecked2 must be false!")
+});
+
+QUnit.test("When form has select input it should get value from selected", function(assert) {
+
+    // given
+    var form = '<form>'+
+    '<select name="carlist">'+
+    ' <option value="volvo" selected>Volvo</option>'+
+    ' <option value="saab">Saab</option>'+
+    ' <option value="opel">Opel</option>'+
+    '</select>'+
+    '</form>';
+
+    // when
+    var result = $(form).serializeFields()
+
+    // then
+    assert.equal(result.carlist, "volvo", "Property carlist has value Volvo!")
+});
+
+QUnit.test("When form has multiple select it should return an Array value from selecteds", function(assert) {
+
+    // given
+    var form = '<form>'+
+    '<select name="carlist" multiple>'+
+    ' <option value="volvo" selected>Volvo</option>'+
+    ' <option value="saab" selected>Saab</option>'+
+    ' <option value="opel">Opel</option>'+
+    '</select>'+
+    '</form>';
+
+    // when
+    var result = $(form).serializeFields()
+
+    // then
+    assert.ok(result.carlist instanceof Array, "Property carlist is an Array.")
+    assert.equal(result.carlist[0], "volvo" , "Property carlist[0] has value Volvo!")
+    assert.equal(result.carlist[1], "saab" , "Property carlist[1] has value Saab!")
+});
+
+QUnit.test("When form has radio button input it should get value from checked", function(assert) {
+
+    // given
+    var form = '<form>'+
+    ' <input type="radio" name="sex" value="male" checked>Male</input>'+
+    ' <input type="radio" name="sex" value="female" />Female</input>'+
+    '</form>';
+
+    // when
+    var result = $(form).serializeFields()
+
+    // then
+    assert.equal(result.sex, "male", "Property sex has value male!")
 });
