@@ -11,13 +11,13 @@ module.exports = function(grunt) {
                 options:{
                     preserveComments: 'some'
                 },
-                files: { 
+                files: {
                   'dist/jquery-serializeFields.min.js': ['src/jquery-serializeFields.js']
                 }
             }
         },
         jshint: {
-            files: ['grunt.js', 'src/*.js', 'tests/*.js']
+            files: ['Gruntfile.js', 'src/*.js', 'tests/*.js']
         }
     });
     // Default task.
@@ -25,14 +25,13 @@ module.exports = function(grunt) {
 
     // Travis CI task.
     grunt.registerTask('travis', ['qunit', 'jshint']);
-    
+
     // Build task.
     grunt.registerTask('build', ['jshint', 'qunit', 'uglify']);
-   
+
     // Load Plugins
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-contrib-jshint');
 
 };
-
