@@ -74,7 +74,7 @@
                 return $(element).is(":checked");
             }
 
-            if ($.isNumeric(value)) {
+            if (type == "number" && $.isNumeric(value)) {
                 return parseFloat(value);
             }
 
