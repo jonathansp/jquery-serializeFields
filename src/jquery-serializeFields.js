@@ -43,7 +43,7 @@
 
         defaultSettings: function() {
             return {
-                field_selector: "input:enabled,select:enabled",
+                field_selector: "input:enabled,select:enabled,textarea:enabled",
                 fieldset_selector: "fieldset:enabled",
                 fieldset_nameattr: "data-name",
                 ignored_fields: "input[type='radio']:not(:checked)"
