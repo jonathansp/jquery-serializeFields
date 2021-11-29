@@ -1,12 +1,8 @@
 /*!
- * jquery-serializeFields v0.0.4
+ * jquery-serializeFields v0.1.1
  * https://github.com/jonathansp/serializeFields
  *
- * Copyright (c) 2015
-
- * Jonathan Prates (jonathansp),
- * Gabriel Broilo (broilogabriel)
- * Cristian Oliveira (CristianOliveiraDaRosa)
+ * Copyright (c) 2015-2021
 
  * Licensed under GPL license.
  */

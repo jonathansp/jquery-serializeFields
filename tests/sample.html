@@ -3,21 +3,18 @@
 
 <head>
     <meta charset="utf-8">
-    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
     <script src="../src/jquery-serializeFields.js"></script>
 </head>
 
 <body>
-
     <form id="form1">
         <input type="text" name="username" value="my user name" />
-        
         <fieldset data-name="address">
             <legend>Address</legend>
             <input type="text" name="street" value="654, test street" />
             <input type="text" name="country" value="Brazil" />
         </fieldset>
-
         <fieldset data-name="contact">
             <legend>Contact</legend>
             <input type="text" name="email" value="contact@mysite.com" />
@@ -27,28 +24,28 @@
                 <input type="text" name="mobile" value="+55 51 987654987" />
             </fieldset>
         </fieldset>
-
-        <input type="checkbox" name="check1" value="true" checked/>
-        <input type="checkbox" name="check2" value="true"/>
-        <input type="checkbox" name="check3" value="true"/>
-
+        <fieldset data-name="info">
+            <legend>Personal Info</legend>
+            <textarea name="details">more details here...</textarea>
+        </fieldset>
+        <input type="checkbox" name="check1" value="true" checked />
+        <input type="checkbox" name="check2" value="true" />
+        <input type="checkbox" name="check3" value="true" />
         <input type="submit" />
     </form>
-
     <script>
-        $(document).ready(function() {
-            $("#form1").submit(function(event) {
+        $(document).ready(() => {
+            $("#form1").submit(event => {
+                event.preventDefault()
 
-                // get json
+                let data = $("#form1").serializeFields()
+                console.log(data)
 
-                var data = $(this).serializeFields();
-
-                event.preventDefault();
-                alert(JSON.stringify(data));
-            });
-        });
+                let json = JSON.stringify(data)
+                console.log(json)
+            })
+        })
     </script>
-
 </body>
 
 </html>

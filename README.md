@@ -1,7 +1,7 @@
 # jquery-serializeFields 
 [![npm version](https://badge.fury.io/js/jquery-serializefields.svg)](http://badge.fury.io/js/jquery-serializefields)
 
-jQuery plugin to serialize form elements into a json object guided by fieldset element.
+jQuery plugin to serialize form elements into a json object using <fieldset> elements.
 
 ## How to use
 
@@ -29,12 +29,13 @@ HTML code:
 
 ```
 
-JS code:
+Code:
 
 ```javascript
 $(document).ready(() => {
     $("#form1").submit(event => {
         event.preventDefault()
+
         let data = $(this).serializeFields()
         console.log(JSON.stringify(data))
     })
@@ -45,16 +46,16 @@ Result:
 
 ```javascript
 {
-    "username":"my user name",
-    "address":{
-        "street":"654, test street",
-        "country":"Brazil"
+    "username": "my user name",
+    "address": {
+        "street": "654, test street",
+        "country": "Brazil"
     },
-    "contact":{
-        "email":"contact@mysite.com",
-        "phones":{
-            "primary":"+55 51 123456789",
-            "mobile":"+55 51 987654987"
+    "contact": {
+        "email": "contact@mysite.com",
+        "phones": {
+            "primary": "+55 51 123456789",
+            "mobile": "+55 51 987654987"
         }
     }
 }
@@ -63,9 +64,9 @@ Result:
 Options:
 
 ```javascript
-let data = $(this).serializeFields({
+let data = $("#myform").serializeFields({
     fieldset_nameattr: "name",
-    fieldset_selector: "fieldset:enabled,select:enabled",
+    field_selector: "input:enabled,select:enabled,textarea:enabled",
     field_selector: "input:enabled",
     ignored_fields: "input[type='radio']:not(:checked)"
 })
@@ -76,14 +77,15 @@ let data = $(this).serializeFields({
 ```bash
 npm install
 
-sudo npm install -g grunt-cli
+npm install -g grunt-cli
 
 grunt build
 ```
-The minified output file will be built into ./dist folder.
+The minified output file will be placed to ./dist folder.
 
 ## Release
 
+* 0.1.1 Add textarea as then default selector.
 * 0.1.0 Updated npm.
 * 0.0.5 Updated old dependencies.
 * 0.0.4 Added support to radio and select inputs.
@@ -91,16 +93,9 @@ The minified output file will be built into ./dist folder.
 * 0.0.2 Added support to nested elements.
 * 0.0.1 First version.
 
-## License
-Copyright (c) 2015
-
-* Jonathan Prates (jonathansp)
-* Gabriel Broilo (broilogabriel)
-* Cristian Oliveira (CristianOliveiraDaRosa)
-
 ### NPM
 
-Download at https://www.npmjs.com/package/jquery-serializefields
+See https://www.npmjs.com/package/jquery-serializefields
 
 ```bash
 npm install jquery-serializefields
