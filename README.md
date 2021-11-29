@@ -68,7 +68,6 @@ Options:
 let data = $("#myform").serializeFields({
     fieldset_nameattr: "name",
     field_selector: "input:enabled,select:enabled,textarea:enabled",
-    field_selector: "input:enabled",
     ignored_fields: "input[type='radio']:not(:checked)"
 })
 ```
