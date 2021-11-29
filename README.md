@@ -1,4 +1,5 @@
-# jquery-serializeFields 
+# jquery-serializeFields
+
 [![npm version](https://badge.fury.io/js/jquery-serializefields.svg)](http://badge.fury.io/js/jquery-serializefields)
 
 jQuery plugin to serialize form elements into a json object using `<fieldset>` elements.
