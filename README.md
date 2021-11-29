@@ -5,7 +5,7 @@ jQuery plugin to serialize form elements into a json object using <fieldset> ele
 
 ## How to use
 
-HTML code:
+Form:
 
 ```html
 <form id="form1">
