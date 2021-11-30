@@ -37,7 +37,7 @@ $(document).ready(() => {
     $("#form1").submit(event => {
         event.preventDefault()
 
-        let data = $(this).serializeFields()
+        let data = $("#form1").serializeFields()
         console.log(JSON.stringify(data))
     })
 })
