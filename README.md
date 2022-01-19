@@ -85,6 +85,7 @@ The minified output file will be placed to ./dist folder.
 
 ## Release
 
+* 0.1.3 Fix for shelljs vulnerability.
 * 0.1.2 Remove bower.
 * 0.1.1 Add textarea as then default selector.
 * 0.1.0 Updated npm.

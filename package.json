@@ -1,6 +1,6 @@
 {
   "name": "jquery-serializefields",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": {
     "name": "Jonathan Simon Prates",
     "email": "jonathan.simonprates@gmail.com"
@@ -33,7 +33,8 @@
     "grunt-contrib-qunit": "^5.1.1",
     "grunt-contrib-uglify": "^5.0.0",
     "lint": "*",
-    "qunit": "*"
+    "qunit": "*",
+    "shelljs": ">=0.8.5"
   },
   "scripts": {
     "test": "grunt default --verbose"

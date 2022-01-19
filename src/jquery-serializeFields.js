@@ -1,8 +1,8 @@
 /*!
- * jquery-serializeFields v0.1.2
+ * jquery-serializeFields.
  * https://github.com/jonathansp/serializeFields
  *
- * Copyright (c) 2015-2021
+ * Copyright (c) 2015-2022.
 
  * Licensed under GPL license.
  */
